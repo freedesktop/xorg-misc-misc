@@ -245,7 +245,7 @@ SUFFIXES = .bdf .pcf.gz t.bdf \
 	@rm -f $@
 	$(UCS2ANY) $^ $(UTIL_DIR)/map-JISX0201.1976-0 JISX0201.1976-0
 
-$(TRUNC_PCF_FILES): %.pcf.gz: %t.bdf
+t.bdf.pcf.gz:
 	@rm -f $@
 	$(BDFTOPCF) -t $^ | gzip > $@
 
@@ -285,9 +285,12 @@ BUILT_BDF_FILES = \
 	$(ISO8859_16_BDF_FILES) \
 	$(KOI8_R_BDF_FILES) \
 	$(JISX0201_BDF_FILES)
+
 CLEANFILES = $(font_DATA) $(TRUNC_BDF_FILES) $(BUILT_BDF_FILES)
 
 EXTRA_DIST = $(BDF_FILES) autogen.sh
+
+all-local: $(BUILT_BDF_FILES) $(font_DATA)
 
 install-data-hook:
 	@rm -f $(DESTDIR)$(fontdir)/fonts.scale
