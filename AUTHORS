@@ -33,7 +33,8 @@ Behdad Esfahbod revised and extended Arabic in 10x20. Raphael Finkel
 <wkpark@chem.skku.ac.kr> prepared the Hangul glyphs used in 12x13ja.
 Janne V. Kujala <jvk@iki.fi> contributed 4x6. Daniel Yacob
 <perl@geez.org> revised some Ethiopic glyphs. Ted Zlatanov
-<tzz@lifelogs.com> did some 7x14.
+<tzz@lifelogs.com> did some 7x14. Mikael Öhman <micketeer@gmail.com>
+worked on 6x12.
 
 The fonts are still maintained by Markus Kuhn and the original
 distribution can be found at:
